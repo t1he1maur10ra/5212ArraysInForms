@@ -35,6 +35,7 @@
             this.textBoxTask1 = new System.Windows.Forms.TextBox();
             this.textBoxTask1Instructions = new System.Windows.Forms.TextBox();
             this.btnAddNumber = new System.Windows.Forms.Button();
+            this.btnDisplay = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -125,11 +126,25 @@
             this.btnAddNumber.Visible = false;
             this.btnAddNumber.Click += new System.EventHandler(this.BtnAddNumber_Click);
             // 
+            // btnDisplay
+            // 
+            this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisplay.Location = new System.Drawing.Point(288, 289);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(417, 68);
+            this.btnDisplay.TabIndex = 7;
+            this.btnDisplay.Text = "Display Numbers";
+            this.btnDisplay.UseVisualStyleBackColor = false;
+            this.btnDisplay.Visible = false;
+            this.btnDisplay.Click += new System.EventHandler(this.BtnDisplay_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 453);
+            this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.btnAddNumber);
             this.Controls.Add(this.textBoxTask1Instructions);
             this.Controls.Add(this.textBoxTask1);
@@ -153,6 +168,7 @@
         private System.Windows.Forms.TextBox textBoxTask1;
         private System.Windows.Forms.TextBox textBoxTask1Instructions;
         private System.Windows.Forms.Button btnAddNumber;
+        private System.Windows.Forms.Button btnDisplay;
     }
 }
 

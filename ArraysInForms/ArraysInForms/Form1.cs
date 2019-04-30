@@ -52,26 +52,38 @@ namespace ArraysInForms
 
         private void BtnAddNumber_Click(object sender, EventArgs e)
         {
-            if (double.TryParse(textBoxTask1.Text, out numbers[counter]))
+            if(counter <= 9)
             {
-                
-                counter++;
-                btnAddNumber.Text = $"Add number {counter+1}";
-                textBoxTask1.ForeColor = Color.LightGray;
-                textBoxTask1.Text = $"Enter your numbers here .....";
-            }
-            else if (!double.TryParse(textBoxTask1.Text, out numbers[counter]))
-            {
-                textBoxTask1.ForeColor = Color.LightGray;
-                textBoxTask1.Text = $"Enter your numbers here .....";
-            }
+                if (double.TryParse(textBoxTask1.Text, out numbers[counter]))
+                {
 
-            if(counter == 9)
+                    counter++;
+                    btnAddNumber.Text = $"Add number {counter + 1}";
+                    textBoxTask1.ForeColor = Color.LightGray;
+                    textBoxTask1.Text = $"Enter your numbers here .....";
+                }
+                else if (!double.TryParse(textBoxTask1.Text, out numbers[counter]))
+                {
+                    textBoxTask1.ForeColor = Color.LightGray;
+                    textBoxTask1.Text = $"Enter your numbers here .....";
+                }
+            }
+            if(counter > 9)
             {
-                textBoxTask1Instructions.Text = "Numbers added to Array...";
+                textBoxTask1.Visible = false;
+                btnDisplay.Visible = true;
+                textBoxTask1Instructions.Text = "Thankyou, all 10 numbers have been input...";
             }
 
             btnAddNumber.Visible = false;
+        }
+
+        private void BtnDisplay_Click(object sender, EventArgs e)
+        {
+            foreach(var x in numbers)
+            {
+                listBoxArray.Items.Add(x);
+            }
         }
     }
 }
