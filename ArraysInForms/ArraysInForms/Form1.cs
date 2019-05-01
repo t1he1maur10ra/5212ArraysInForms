@@ -80,9 +80,9 @@ namespace ArraysInForms
 
         private void BtnDisplay_Click(object sender, EventArgs e)
         {
-            foreach(var x in numbers)
+            for(int i = 0; i < numbers.Length; i++)
             {
-                listBoxArray.Items.Add(x);
+                listBoxArray.Items.Add($"Number {i+1}:\t{numbers[i]}");
             }
         }
     }
